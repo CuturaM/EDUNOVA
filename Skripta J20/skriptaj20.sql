@@ -125,3 +125,54 @@ insert into clan(grupa,polaznik) values
 (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),(1,11),(2,7),(2,11);
 
 
+
+update smjer set upisnina=500 where sifra=1;
+update smjer set cijena=5000, upisnina=400 where sifra>1;
+update smjer set upisnina=upisnina*0.9;
+update smjer set cijena=cijena+100;
+
+alter table smjer add column porez decimal(18,2);
+
+update smjer set porez=rand()*100;
+
+update grupa set predavac=1 where sifra=1;
+update grupa set predavac=2 where sifra=2;
+
+update osoba set email='visic.ivan1@gmail.com' where sifra=11;
+
+update polaznik set 
+brojugovora=concat(
+			cast(year(now())as char(4)), 
+			'-', 
+			cast(rand()*1000 as int)
+        );
+update predavac set iban='HR7523400096573698967' where sifra=1;
+update predavac set iban='HR9423600003199989684' where sifra=2;
+
+insert into smjer (naziv,trajanje,certificiran) values 
+('Za brisanje',100,true);
+
+insert into osoba(ime,prezime,email) values 
+('a','a','a');
+
+insert into osoba(ime,prezime,email) values 
+('a','a','a');
+
+insert into polaznik (osoba) values 
+(14);
+
+insert into predavac (osoba) values 
+(15);
+
+insert into grupa (naziv,smjer,predavac) values 
+('a',1,3);
+
+insert into clan (grupa,polaznik) values 
+(3,1);
+
+delete from clan where grupa=3;
+delete from polaznik where sifra=12;
+delete from grupa where sifra=3;
+delete from smjer where sifra=7;
+delete from predavac where sifra =3;
+delete from osoba where sifra in (14,15);
