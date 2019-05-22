@@ -33,3 +33,29 @@ telefon varchar(32) not null,
 oib char(11),
 iban varchar(32)
 );
+
+
+alter table popravak add foreign key (sat) references sat(sifra);
+alter table popravak add foreign key (korisnik) references osoba(sifra);
+alter table popravak add foreign key (segrt) references osoba(sifra);
+
+insert into sat
+(vrsta,boja,materijal,proizvodjac) values
+/* 1 */
+('Vojni','Smeđa','Titanium','G-Shock'),
+/* 2 */
+('Dress','Crna','Nehrđajući čelik','Tissot');
+
+insert into osoba
+(ime,prezime,telefon,oib,iban) values
+/* 1 */
+('Ante','Starčević','00385955260000',null,null),
+/* 2 */ 
+('Pero','Perić','00385915211122',null,null);
+
+insert into popravak
+(sat,korisnik,segrt,cijena) values
+/* 1 */
+(1,1,2,300.00),
+/* 2 */
+(2,1,null,200.55);
