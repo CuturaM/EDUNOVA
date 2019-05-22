@@ -53,3 +53,14 @@ smjer int not null,
 predavac int,
 datumpocetka datetime default now()
 );
+
+
+alter table grupa add foreign key (smjer) references smjer(sifra);
+alter table grupa add foreign key (predavac) references predavac(sifra);
+
+alter table predavac add foreign key (osoba) references osoba(sifra);
+
+alter table polaznik add foreign key (osoba) references osoba(sifra);
+
+alter table clan add foreign key (grupa) references grupa(sifra);
+alter table clan add foreign key (polaznik) references polaznik(sifra);
