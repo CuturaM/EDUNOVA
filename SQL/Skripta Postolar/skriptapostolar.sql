@@ -33,3 +33,29 @@ telefon varchar(32) not null,
 oib char(11),
 iban varchar(32)
 );
+
+
+alter table popravak add foreign key (obuca) references obuca(sifra);
+alter table popravak add foreign key (korisnik) references osoba(sifra);
+alter table popravak add foreign key (segrt) references osoba(sifra);
+
+insert into obuca 
+(vrsta,boja,materijal,broj) values
+/* 1 */
+('Cipela','Crna','Koža',42.0),
+/* 2 */
+('Papuča','Plava','Guma',42.5);
+
+insert into osoba
+(ime,prezime,telefon,oib,iban) values
+/* 1 */
+('Ante','Starčević','00385955222722',null,null),
+/* 2 */
+('Stjepan','Radić','00385911323341','11122211121',null);
+
+insert into popravak
+(obuca,korisnik,segrt,cijena) values
+/* 1 */
+(1,1,2,220.00),
+/* 2 */
+(2,1,2,55.50);
