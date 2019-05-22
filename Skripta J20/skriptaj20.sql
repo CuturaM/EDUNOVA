@@ -8,48 +8,48 @@ create database edunovaj20 default character set utf8;
 use edunovaj20;
 
 create table smjer(
-sifra int,
-naziv varchar(50),
-trajanje int,
+sifra int not null primary key auto_increment,
+naziv varchar(50) not null,
+trajanje int not null,
 cijena decimal(18,2),
 upisnina decimal(18,2),
-certificiran boolean
+certificiran boolean not null
 );
 
 
 create table osoba(
-sifra int,
+sifra int primary key auto_increment,
 oib char(11),
-ime varchar(50),
-prezime varchar(50),
-email varchar(100)
+ime varchar(50) not null,
+prezime varchar(50) not null,
+email varchar(100) not null
 );
 
 
 create table polaznik(
-sifra int,
-osoba int,
+sifra int not null primary key auto_increment,
+osoba int not null,
 brojugovora varchar(20)
 );
 
 
 create table predavac(
-sifra int,
-osoba int,
+sifra int not null primary key auto_increment,
+osoba int not null,
 iban varchar(32)
 );
 
 
 create table clan(
-grupa int,
-polaznik int
+grupa int int not null,
+polaznik int int not null
 );
 
 
 create table grupa(
-sifra int,
-naziv varchar(50),
-smjer int,
+sifra int not null primary key auto_increment,
+naziv varchar(50) not null,
+smjer int not null,
 predavac int,
-datumpocetka datetime
+datumpocetka datetime default now()
 );
