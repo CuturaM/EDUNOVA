@@ -41,7 +41,7 @@ insert into proizvod
 /* 2 */
 ('Pan',9.80),
 /* 3 */
-('KarlovaÄko',9.99);
+('Karlovaèko',9.99);
 
 insert into racun
 (datum,kupac) values
