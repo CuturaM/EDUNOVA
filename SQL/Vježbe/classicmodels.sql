@@ -230,3 +230,19 @@ UNLOCK TABLES;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+
+-- VJEŽBA
+
+-- Izlistajte sve proizvode u liniji prizvoda Vlakovi
+select productName from products 
+where productLine='trains';
+
+-- Izlistati sva jedinstvena imena i prezimena kupaca koji su kupili proizvode u liniji poizvoda Trains
+select distinct e.contactfirstName,e.contactLastName 
+from productlines a
+left join products b on a.productLine=b.productLine
+left join orderdetails c on b.productCode=c.productCode
+left join orders d on c.orderNumber=d.orderNumber
+left join customers e on d.customerNumber=d.customerNumber
+where a.productLine='trains';
