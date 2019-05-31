@@ -7564,5 +7564,23 @@ where aktivan=0 and sifra!=346 and 234 and 589;
 select naslov from katalog
 where sifra>3000 or naslov like '%ljubav%';
 
+-- drugi dio
 
+select sifra from autor
+where ime='august' and prezime like '%šenoa%';
+
+select naslov from katalog
+where autor=2;
+
+select b.naslov
+from autor a 
+inner join katalog b on a.sifra=b.autor
+where a.ime='august' and a.prezime='šenoa';
+
+select b.naslov, d.naziv
+from autor a
+inner join katalog b on a.sifra=b.autor
+inner join izdavac c on b.izdavac=c.sifra
+inner join mjesto d on b.mjesto=d.sifra
+where a.datumrodenja between '1976-01-01' and '1976-12-31' and c.aktivan=1;
 
