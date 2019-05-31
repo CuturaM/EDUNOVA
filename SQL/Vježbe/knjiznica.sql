@@ -7479,3 +7479,90 @@ insert into katalog (sifra, naslov, autor, izdavac,mjesto) values (3218, 'ODVOJE
 insert into katalog (sifra, naslov, autor, izdavac,mjesto) values (3219, 'NOVI SVIJET DUHA', 18993, 408, 69698);
 insert into katalog (sifra, naslov, autor, izdavac,mjesto) values (3220, 'RUM PUNČ', 15903, 479, 70173);
 insert into katalog (sifra, naslov, autor, izdavac,mjesto) values (3221, 'KRALJICA ŠKOLE', 19299, 441, 71323);
+
+--Vježba
+
+select * from mjesto;
+
+select * from mjesto 
+where sifra=2;
+
+select naziv, postanskibroj from mjesto
+where sifra=2;
+
+select postanskibroj, 'Pink panter je lud',naziv from mjesto
+where sifra=2;
+
+select postanskibroj as 'POŠTANSKI BROJ',naziv as 'BROJ ZNAKOVA U NAZIVU MJESTA' from mjesto
+where sifra=2;
+
+select sifra,ime,prezime,datumrodenja from autor
+where sifra=2;
+
+select naziv,aktivan from izdavac 
+where sifra=2;
+
+select naziv,postanskibroj from mjesto
+where sifra>2 and postanskibroj is null;
+
+select naziv,postanskibroj from mjesto
+where not (sifra>2 and postanskibroj is not null);
+
+select ime,prezime from autor
+where sifra!=2 and datumrodenja between '1980-01-01' and '1980-02-01';
+
+select ime,prezime from autor
+where (sifra>=2 and sifra<=4) or (sifra>15452 and sifra<15460);
+
+select naziv from izdavac 
+where sifra in (414,490,696);
+
+select naziv from izdavac
+where naziv like '%a';
+
+select naziv from izdavac
+where naziv like 'nt%';
+
+select naziv from izdavac
+where naziv like 'a%k';
+
+select naziv from izdavac
+where naziv like '%obrt%';
+
+-- Izlistajte sva imena i prezimena autora
+select ime,prezime from autor;
+
+-- Izlistajte sve naslove knjiga u katologu koje u sebi sadrţe niz znakova LJUB
+select naslov from katalog
+where naslov like '%ljub%';
+
+-- Izlistajte sva mjesta koja imaju definiran poštanski broj
+select naziv,postanskibroj from mjesto
+where postanskibroj is not null;
+
+-- Izlistajte nazive mjesta čija šifra nije izmeĎu 2000 i 3000
+select naziv from mjesto
+where sifra<2000 and sifra>3000;
+
+-- Postoji li u Hrvatsko mjesto koje počinje s slovom Y?
+select naziv from mjesto 
+where drzava='Hrvatska' and naziv like 'y%';
+
+-- Koliko je autora roĎeno 7. prosinca 1980?
+select ime,prezime from autor
+where datumrodenja='1980-12-07';
+
+-- Izlistajte sve aktivne izdavače čiji naziv završava s znakom . (točka)
+select naziv from izdavac
+where aktivan=1 and naziv like '%.';
+
+-- Izlistajte sve neaktivne izdavače koji nemaju šifre 346, 234, 589
+select naziv from izdavac
+where aktivan=0 and sifra!=346 and 234 and 589;
+
+-- Izlistajte sve kataloţne zapise čija je šifra veća od 3000 ili naslov u sebi sadrţi riječ ljubav
+select naslov from katalog
+where sifra>3000 or naslov like '%ljubav%';
+
+
+
