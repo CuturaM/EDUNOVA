@@ -176,3 +176,42 @@ delete from grupa where sifra=3;
 delete from smjer where sifra=7;
 delete from predavac where sifra =3;
 delete from osoba where sifra in (14,15);
+
+
+-- Vježba spajanja tablica
+select a.naziv as 'NAZIV GRUPE', b.naziv as 'NAZIV SMJERA'
+from grupa a 
+inner join smjer b on a.smjer=b.sifra;
+
+select grupa.naziv as 'NAZIV GRUPE', smjer.naziv as 'NAZIV SMJERA'
+from grupa 
+inner join smjer on grupa.smjer=smjer.sifra;
+
+
+select a.naziv as 'NAZIV GRUPE', b.naziv as 'NAZIV SMJERA'
+from grupa a 
+left join smjer b on a.smjer=b.sifra;
+
+select a.naziv as 'NAZIV GRUPE', b.naziv as 'NAZIV SMJERA'
+from grupa a 
+right join smjer b on a.smjer=b.sifra;
+
+select b.naziv as 'NAZIV GRUPE', a.naziv as 'NAZIV SMJERA'
+from smjer a 
+left join grupa b on b.smjer=a.sifra;
+
+
+select a.naziv as grupa,b.naziv as smjer,concat(d.ime,' ',  d.prezime) as predavac
+from grupa a 
+inner join smjer b on a.smjer=b.sifra
+left join predavac c on a.predavac=c.sifra
+left join osoba d on c.osoba=d.sifra;
+
+
+--ispisati sva imena i prezimena polaznika na grupi J20
+select d.ime,d.prezime
+from grupa a 
+inner join clan b on a.sifra=b.grupa
+inner join polaznik c on b.polaznik=c.sifra
+inner join osoba d on c.osoba=d.sifra
+where a.naziv='J20';
