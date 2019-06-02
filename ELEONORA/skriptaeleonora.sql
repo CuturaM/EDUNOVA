@@ -36,7 +36,7 @@ skladiste varchar(50) not null
 create table narudzba(
 artikl int not null,
 racun int not null,
-vrijeme datetime default now,
+vrijeme datetime default now(),
 korisnik int not null,
 kolicina decimal(18,3)
 );
@@ -45,11 +45,11 @@ kolicina decimal(18,3)
 
 create table racun(
 sifra int not null primary key auto_increment,
-vrijeme datetime default now,
-artikal int not null,
+vrijeme datetime default now(),
+artikl int not null,
 zki varchar(32),
 jir varchar(32),
-korisink int not null,
+korisnik int not null,
 nacinplacanja int not null,
 iznos decimal(18,2) not null
 );
@@ -77,10 +77,10 @@ drzava varchar(50) not null
 
 
 
-alter table narudzba add foreign key (artikal) references artikl(sifra);
+alter table narudzba add foreign key (artikl) references artikl(sifra);
 alter table narudzba add foreign key (racun) references racun(sifra);
-alter table narudzba add foreign key (korisink) references korisink(sifra);
+alter table narudzba add foreign key (korisnik) references korisnik(sifra);
 
-alter table racun add foreign key (artikal) references artikal(sifra);
+alter table racun add foreign key (artikl) references artikl(sifra);
 alter table racun add foreign key (korisnik) references korisnik(sifra);
 alter table racun add foreign key (nacinplacanja) references placanje(sifra);
