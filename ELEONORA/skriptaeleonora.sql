@@ -11,7 +11,7 @@ create table korisnik(
 sifra int not null primary key auto_increment,
 ime varchar(50) not null,
 prezime varchar(50) not null,
-zaporka int (4) not null,
+lozinka int (4) not null,
 oib char(11) not null,
 email varchar(50) not null,
 administrator boolean not null
@@ -36,9 +36,9 @@ skladiste varchar(50) not null
 create table narudzba(
 sifra int not null primary key auto_increment,
 artikl int not null,
-vrijeme datetime default now(),
-korisnik int not null,
-kolicina decimal(18,3)
+racun int not null,
+kolicina decimal(18,3), 
+popust decimal(18,2)
 );
 
 
@@ -46,13 +46,12 @@ kolicina decimal(18,3)
 create table racun(
 sifra int not null primary key auto_increment,
 vrijeme datetime default now(),
-artikl int not null,
-kolicina int not null,
 zki varchar(32),
 jir varchar(32),
 korisnik int not null,
 nacinplacanja int not null,
-iznos decimal(18,2) not null
+iznos decimal(18,2) not null,
+kupac int
 );
 
 
@@ -66,7 +65,7 @@ virman boolean
 
 
 
-create table partner(
+create table kupac(
 sifra int not null primary key auto_increment,
 naziv varchar(100) not null,
 oib char(11) not null,
@@ -79,9 +78,8 @@ drzava varchar(50) not null
 
 
 alter table narudzba add foreign key (artikl) references artikl(sifra);
-alter table narudzba add foreign key (korisnik) references korisnik(sifra);
+alter table narudzba add foreign key (racun) references racun(sifra);
 
-alter table racun add foreign key (artikl) references narudzba(sifra);
-alter table racun add foreign key (korisnik) references narudzba(sifra);
-alter table racun add foreign key (kolicina) references narudzba(sifra);
+alter table racun add foreign key (korisnik) references korisnik(sifra);
 alter table racun add foreign key (nacinplacanja) references placanje(sifra);
+alter table racun add foreign key (kupac) references kupac(sifra);
