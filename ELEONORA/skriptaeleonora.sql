@@ -121,15 +121,15 @@ insert into artikl
 /* 15 */
 ('CEDEVITA',400.000,11.00,2.11,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1lwu5fu4Y4Qju9S4jT0-MhOpFes6lOxe6'),
 /* 16 */
-('COCKTA 0.25L',200.000,15.00,2.79,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1WXphZ8FDe1omP7ab_c2DS-UnPbqUjOmW');
+('COCKTA 0.25L',200.000,15.00,2.79,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1WXphZ8FDe1omP7ab_c2DS-UnPbqUjOmW'),
 /* 17 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
+('MINERALNA VODA 1L',48.000,20.00,1.91,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1sXuyJ2MOeimvpLAIQF2URgkVKqLFZVDU'),
+/* 18 */
+('MINERALNA VODA 0.25L',96.000,10.00,1.29,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1PW-OK5Q9nnIkphic4tPruniEXVoY_cQm'),
+/* 19 */
+('VODA NEGAZIRANA 0.33L',96.000,10.00,1.13,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1A8o3zzTzBe5DsVqKl7wZenAv8tXto7QR'),
+/* 20 */
+('SENSATION JAMNICA 0.20L',96.000,11.00,1.74,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1lkG6PHtEQvMj0NaSoIsExhK75yWu1n6U');
 /* 10 */
 
 /* 10 */
