@@ -22,12 +22,11 @@ administrator boolean not null
 create table artikl(
 sifra int not null primary key auto_increment,
 naziv varchar(50) not null,
-kolicina decimal(18,3) not null,
+zaliha decimal(18,3) not null,
 prodajnacijena decimal(18,2) not null,
 nabavnacijena decimal(18,2) not null,
-jmj varchar(3) not null,
+normativ decimal (18,3) not null,
 kategorija varchar(50) not null,
-pdv decimal(18,2) not null,
 skladiste varchar(50) not null
 );
 
@@ -51,16 +50,10 @@ jir varchar(32),
 korisnik int not null,
 nacinplacanja int not null,
 iznos decimal(18,2) not null,
-kupac int
-);
-
-
-
-create table placanje(
-sifra int not null primary key auto_increment,
-gotovina boolean,
-kartica boolean,
-virman boolean
+kupac int,
+nacinplacanja varchar(50),
+pdv int not null,
+blagajna varchar(50) not null
 );
 
 
@@ -77,9 +70,16 @@ drzava varchar(50) not null
 
 
 
+create table pdv (
+sifra int not null primary key auto_increment,
+stopapdv decimal(18,2) not null
+);
+
+
+
 alter table narudzba add foreign key (artikl) references artikl(sifra);
 alter table narudzba add foreign key (racun) references racun(sifra);
 
 alter table racun add foreign key (korisnik) references korisnik(sifra);
-alter table racun add foreign key (nacinplacanja) references placanje(sifra);
+alter table racun add foreign key (pdv) references pdv(sifra);
 alter table racun add foreign key (kupac) references kupac(sifra);
