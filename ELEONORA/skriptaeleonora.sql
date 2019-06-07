@@ -129,26 +129,26 @@ insert into artikl
 /* 19 */
 ('VODA NEGAZIRANA 0.33L',96.000,10.00,1.13,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1A8o3zzTzBe5DsVqKl7wZenAv8tXto7QR'),
 /* 20 */
-('SENSATION JAMNICA 0.20L',96.000,11.00,1.74,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1lkG6PHtEQvMj0NaSoIsExhK75yWu1n6U');
-/* 10 */
+('SENSATION JAMNICA 0.20L',96.000,11.00,1.74,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1lkG6PHtEQvMj0NaSoIsExhK75yWu1n6U'),
+/* 21 */
+('KARLOVAČKO 0.5L',100.000,15.00,3.54,1.000,'PIVO','ŠANK1','https://drive.google.com/open?id=1S5mYhmQd7J9O7ZcQj2_wQ4zrc3zGvcLf'),
+/* 22 */
+('HEINEKEN 0.33L',96.000,20.00,4.85,1.000,'PIVO','ŠANK1','https://drive.google.com/open?id=1WEFWo87NkyGuC-20rdt-4LQ8z963hDZK'),
+/* 23 */
+('GRAŠEVINA BELJE 1L',24.000,140.00,24.10,1.000,'VINO','ŠANK1','https://drive.google.com/open?id=1KHW5NNyR5YNFj3tRoeTJuCNnjPmEEv5Q'),
+/* 24 */
+('MERLOT BELJE 1L',24.000,140.00,27.34,1.000,'VINO','ŠANK1','https://drive.google.com/open?id=1bBO3AiUNXZ3ryGp-WBg3jJxgq2HW03Vd'),
+/* 25 */
 
-/* 10 */
+/* 26 */
 
-/* 10 */
+/* 27 */
 
-/* 10 */
+/* 28 */
 
-/* 10 */
+/* 29 */
 
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
+/* 30 */
 
 /* 10 */
 
