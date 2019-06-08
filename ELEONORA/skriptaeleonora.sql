@@ -139,60 +139,24 @@ insert into artikl
 /* 24 */
 ('MERLOT BELJE 1L',24.000,140.00,27.34,1.000,'VINO','ŠANK1','https://drive.google.com/open?id=1bBO3AiUNXZ3ryGp-WBg3jJxgq2HW03Vd'),
 /* 25 */
-
+('PELINKOVAC 0.03L',2.000,10.00,1.43,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1hVFIbP2ncQuBdydZrfkP-7H050lKI0zW'),
 /* 26 */
-
+('TRAVARICA 0.03L',2.000,10.00,1.45,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1cx9ZBLCtGiPbBOgEA4IWZ0UQrvJOdwGn'),
 /* 27 */
-
+('LOZOVAČA 0.03L',2.000,12.00,2.18,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1FyoigncQ_u0SoNeJA2tsV54YJ6k3aQe0'),
 /* 28 */
-
+('ŠLJIVOVICA 0.03L',2.000,10.00,1.88,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1nER-rvw66IqmJRiCG4ve3ey1-NGXOjVM'),
 /* 29 */
-
+('VIŠNJEVAC 0.03L',2.000,12.00,2.08,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1NuMh4NS6M7p0chxyVLV0EmGv03abXOe0'),
 /* 30 */
+('JAGERMEISTER 0.03L',1.400,15.00,3.08,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1p0ODDKK34BLSUTqY_pc-DiyOvw57XUap'),
+/* 31 */
+('JACK DANIELS 0.03L',1.400,20.00,5.33,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1eUsFxWcmp4PFZxDoCa5X7RxE_UffLso-'),
+/* 32 */
+('SMIRNOFF 0.03L',1.400,12.00,2.97,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1c4x3kJ_D7StpO1A63b8hF45EuWdGUNvV'),
+/* 33 */
+('BOMBAY SAPPHIRE 0.03L',1.400,18.00,4.41,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1c4x3kJ_D7StpO1A63b8hF45EuWdGUNvV');
 
-/* 10 */
 
-/* 10 */
 
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
-/* 10 */
-
+insert into 
