@@ -11,10 +11,10 @@ create table korisnik(
 sifra int not null primary key auto_increment,
 ime varchar(50) not null,
 prezime varchar(50) not null,
-lozinka int (4) not null,
+lozinka char(4) not null,
 oib char(11) not null,
 email varchar(50) not null,
-administrator boolean not null
+administrator int
 );
 
 
@@ -77,6 +77,8 @@ stopapdv decimal(18,2) not null
 
 
 
+alter table korisnik add foreign key (administrator) references korisnik(sifra);
+
 alter table narudzba add foreign key (artikl) references artikl(sifra);
 alter table narudzba add foreign key (racun) references racun(sifra);
 
@@ -87,6 +89,15 @@ alter table racun add foreign key (kupac) references kupac(sifra);
 
 
 /* Ubacivanje podataka u bazu */
+
+insert into korisnik
+(ime,prezime,lozinka,oib,email,administrator) values
+/* 1 */
+('Marin','Čutura','0646','06466535209','w.cutura1990@gmail.com',1),
+/* 2 */
+('Vlatka','Martinić','0103','01031831151','vlatka.martinic@gmail.com',null);
+
+
 
 insert into artikl
 (naziv,zaliha,prodajnacijena,nabavnacijena,normativ,kategorija,skladiste,slika) values
@@ -157,6 +168,17 @@ insert into artikl
 /* 33 */
 ('BOMBAY SAPPHIRE 0.03L',1.400,18.00,4.41,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1c4x3kJ_D7StpO1A63b8hF45EuWdGUNvV');
 
+insert into pdv
+(stopapdv) values
+/* 1 */
+(25.00),
+/* 2 */
+(3.00);
 
 
-insert into 
+
+
+
+
+
+
