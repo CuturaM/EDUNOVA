@@ -28,7 +28,8 @@ nabavnacijena decimal(18,2) not null,
 normativ decimal (18,3) not null,
 kategorija varchar(50) not null,
 skladiste varchar(50) not null,
-slika varchar(999) not null
+slika varchar(999) not null,
+stopapp boolean
 );
 
 
@@ -102,73 +103,73 @@ insert into korisnik
 
 
 insert into artikl
-(naziv,zaliha,prodajnacijena,nabavnacijena,normativ,kategorija,skladiste,slika) values
+(naziv,zaliha,prodajnacijena,nabavnacijena,normativ,kategorija,skladiste,slika,stopapp) values
 /* 1 */
-('ESPRESSO',5.000,8.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1a-H6zom5oyedSN7Teu3At8t2W3UFj_74'),
+('ESPRESSO',5.000,8.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1a-H6zom5oyedSN7Teu3At8t2W3UFj_74',0),
 /* 2 */
-('KAVA S MLIJEKOM',0.000,9.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1b8RGnadP3jk6wSWAWgm94wcGwQD_0vEa'),
+('KAVA S MLIJEKOM',0.000,9.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1b8RGnadP3jk6wSWAWgm94wcGwQD_0vEa',0),
 /* 3 */
-('KAVA MLIJEKO PRODUŽENA',0.000,10.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=11y7DiSGXSvv5cRHGpRr9xF4FSswMJnk2'),
+('KAVA MLIJEKO PRODUŽENA',0.000,10.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=11y7DiSGXSvv5cRHGpRr9xF4FSswMJnk2',0),
 /* 4 */
-('CAPPUCCINO',0.000,10.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1wkobzO4NXots4FvDXeJmmC4eQQiO67p4'),
+('CAPPUCCINO',0.000,10.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1wkobzO4NXots4FvDXeJmmC4eQQiO67p4',0),
 /* 5 */
-('BIJELA KAVA',0.000,12.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1kKi1HzkitR6IcsubHr7igkvjUP8sZ5VB'),
+('BIJELA KAVA',0.000,12.00,0.89,0.007,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1kKi1HzkitR6IcsubHr7igkvjUP8sZ5VB',0),
 /* 6*/
-('NESCAFE',250.000,12.00,1.37,1.000,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1ldfwjRPD-gqTse3NZ6lvZ9byyaOwsniX'),
+('NESCAFE',250.000,12.00,1.37,1.000,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1ldfwjRPD-gqTse3NZ6lvZ9byyaOwsniX',0),
 /* 7 */
-('ČAJ',400.000,10.00,0.40,1.000,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1ldfwjRPD-gqTse3NZ6lvZ9byyaOwsniX'),
+('ČAJ',400.000,10.00,0.40,1.000,'TOPLI NAPITCI','ŠANK1','https://drive.google.com/open?id=1ldfwjRPD-gqTse3NZ6lvZ9byyaOwsniX',0),
 /* 8 */
-('COCA COLA 0.25L',240.000,15.00,3.09,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=15vY9Xn-_PXikAzKeVFcrIWwuYrYN5BeG'),
+('COCA COLA 0.25L',240.000,15.00,3.09,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=15vY9Xn-_PXikAzKeVFcrIWwuYrYN5BeG',1),
 /* 9 */
-('FANTA 0.25L',240.000,15.00,3.09,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1zQP5JnwCbUo9sTgM7OLLlUJ4Dyp2AsN-'),
+('FANTA 0.25L',240.000,15.00,3.09,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1zQP5JnwCbUo9sTgM7OLLlUJ4Dyp2AsN-',1),
 /* 10 */
-('SPRITE 0.25L',240.000,15.00,3.09,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1C6M7rIXE-_WHDmkW1F7TxVMFHuSKjv-l'),
+('SPRITE 0.25L',240.000,15.00,3.09,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1C6M7rIXE-_WHDmkW1F7TxVMFHuSKjv-l',1),
 /* 11 */
-('SCHWEPPES 0.25L',240.000,15.00,3.20,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1grQiwBmWRgEAQW09L7a2GS9jgyu2j7BM'),
+('SCHWEPPES 0.25L',240.000,15.00,3.20,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1grQiwBmWRgEAQW09L7a2GS9jgyu2j7BM',1),
 /* 12 */
-('PRIRODNI SOK CAPPY 0.20L',200.000,15.00,3.50,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1a8BVXogDk2dQQnXlfK8JlTenLlNxs62J'),
+('PRIRODNI SOK CAPPY 0.20L',200.000,15.00,3.50,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1a8BVXogDk2dQQnXlfK8JlTenLlNxs62J',1),
 /* 13 */
-('LEDENI ČAJ 0.20L',240.000,15.00,2.30,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1mWwYs-avXsl35AD6sKFSMG0malsL3x3Z'),
+('LEDENI ČAJ 0.20L',240.000,15.00,2.30,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1mWwYs-avXsl35AD6sKFSMG0malsL3x3Z',1),
 /* 14 */
-('ORANGINA 0.25L',240.000,16.00,4.39,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1jQilEO4pQdYuRzXc0TcpXgXZ9DkFt1xW'),
+('ORANGINA 0.25L',240.000,16.00,4.39,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1jQilEO4pQdYuRzXc0TcpXgXZ9DkFt1xW',1),
 /* 15 */
-('CEDEVITA',400.000,11.00,2.11,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1lwu5fu4Y4Qju9S4jT0-MhOpFes6lOxe6'),
+('CEDEVITA',400.000,11.00,2.11,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1lwu5fu4Y4Qju9S4jT0-MhOpFes6lOxe6',1),
 /* 16 */
-('COCKTA 0.25L',200.000,15.00,2.79,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1WXphZ8FDe1omP7ab_c2DS-UnPbqUjOmW'),
+('COCKTA 0.25L',200.000,15.00,2.79,1.000,'SOKOVI','ŠANK1','https://drive.google.com/open?id=1WXphZ8FDe1omP7ab_c2DS-UnPbqUjOmW',1),
 /* 17 */
-('MINERALNA VODA 1L',48.000,20.00,1.91,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1sXuyJ2MOeimvpLAIQF2URgkVKqLFZVDU'),
+('MINERALNA VODA 1L',48.000,20.00,1.91,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1sXuyJ2MOeimvpLAIQF2URgkVKqLFZVDU',1),
 /* 18 */
-('MINERALNA VODA 0.25L',96.000,10.00,1.29,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1PW-OK5Q9nnIkphic4tPruniEXVoY_cQm'),
+('MINERALNA VODA 0.25L',96.000,10.00,1.29,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1PW-OK5Q9nnIkphic4tPruniEXVoY_cQm',1),
 /* 19 */
-('VODA NEGAZIRANA 0.33L',96.000,10.00,1.13,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1A8o3zzTzBe5DsVqKl7wZenAv8tXto7QR'),
+('VODA NEGAZIRANA 0.33L',96.000,10.00,1.13,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1A8o3zzTzBe5DsVqKl7wZenAv8tXto7QR',1),
 /* 20 */
-('SENSATION JAMNICA 0.20L',96.000,11.00,1.74,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1lkG6PHtEQvMj0NaSoIsExhK75yWu1n6U'),
+('SENSATION JAMNICA 0.20L',96.000,11.00,1.74,1.000,'MINERALNE VODE','ŠANK1','https://drive.google.com/open?id=1lkG6PHtEQvMj0NaSoIsExhK75yWu1n6U',1),
 /* 21 */
-('KARLOVAČKO 0.5L',100.000,15.00,3.54,1.000,'PIVO','ŠANK1','https://drive.google.com/open?id=1S5mYhmQd7J9O7ZcQj2_wQ4zrc3zGvcLf'),
+('KARLOVAČKO 0.5L',100.000,15.00,3.54,1.000,'PIVO','ŠANK1','https://drive.google.com/open?id=1S5mYhmQd7J9O7ZcQj2_wQ4zrc3zGvcLf',1),
 /* 22 */
-('HEINEKEN 0.33L',96.000,20.00,4.85,1.000,'PIVO','ŠANK1','https://drive.google.com/open?id=1WEFWo87NkyGuC-20rdt-4LQ8z963hDZK'),
+('HEINEKEN 0.33L',96.000,20.00,4.85,1.000,'PIVO','ŠANK1','https://drive.google.com/open?id=1WEFWo87NkyGuC-20rdt-4LQ8z963hDZK',1),
 /* 23 */
-('GRAŠEVINA BELJE 1L',24.000,140.00,24.10,1.000,'VINO','ŠANK1','https://drive.google.com/open?id=1KHW5NNyR5YNFj3tRoeTJuCNnjPmEEv5Q'),
+('GRAŠEVINA BELJE 1L',24.000,140.00,24.10,1.000,'VINO','ŠANK1','https://drive.google.com/open?id=1KHW5NNyR5YNFj3tRoeTJuCNnjPmEEv5Q',1),
 /* 24 */
-('MERLOT BELJE 1L',24.000,140.00,27.34,1.000,'VINO','ŠANK1','https://drive.google.com/open?id=1bBO3AiUNXZ3ryGp-WBg3jJxgq2HW03Vd'),
+('MERLOT BELJE 1L',24.000,140.00,27.34,1.000,'VINO','ŠANK1','https://drive.google.com/open?id=1bBO3AiUNXZ3ryGp-WBg3jJxgq2HW03Vd',1),
 /* 25 */
-('PELINKOVAC 0.03L',2.000,10.00,1.43,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1hVFIbP2ncQuBdydZrfkP-7H050lKI0zW'),
+('PELINKOVAC 0.03L',2.000,10.00,1.43,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1hVFIbP2ncQuBdydZrfkP-7H050lKI0zW',1),
 /* 26 */
-('TRAVARICA 0.03L',2.000,10.00,1.45,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1cx9ZBLCtGiPbBOgEA4IWZ0UQrvJOdwGn'),
+('TRAVARICA 0.03L',2.000,10.00,1.45,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1cx9ZBLCtGiPbBOgEA4IWZ0UQrvJOdwGn',1),
 /* 27 */
-('LOZOVAČA 0.03L',2.000,12.00,2.18,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1FyoigncQ_u0SoNeJA2tsV54YJ6k3aQe0'),
+('LOZOVAČA 0.03L',2.000,12.00,2.18,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1FyoigncQ_u0SoNeJA2tsV54YJ6k3aQe0',1),
 /* 28 */
-('ŠLJIVOVICA 0.03L',2.000,10.00,1.88,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1nER-rvw66IqmJRiCG4ve3ey1-NGXOjVM'),
+('ŠLJIVOVICA 0.03L',2.000,10.00,1.88,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1nER-rvw66IqmJRiCG4ve3ey1-NGXOjVM',1),
 /* 29 */
-('VIŠNJEVAC 0.03L',2.000,12.00,2.08,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1NuMh4NS6M7p0chxyVLV0EmGv03abXOe0'),
+('VIŠNJEVAC 0.03L',2.000,12.00,2.08,0.030,'DOMAĆA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1NuMh4NS6M7p0chxyVLV0EmGv03abXOe0',1),
 /* 30 */
-('JAGERMEISTER 0.03L',1.400,15.00,3.08,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1p0ODDKK34BLSUTqY_pc-DiyOvw57XUap'),
+('JAGERMEISTER 0.03L',1.400,15.00,3.08,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1p0ODDKK34BLSUTqY_pc-DiyOvw57XUap',1),
 /* 31 */
-('JACK DANIELS 0.03L',1.400,20.00,5.33,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1eUsFxWcmp4PFZxDoCa5X7RxE_UffLso-'),
+('JACK DANIELS 0.03L',1.400,20.00,5.33,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1eUsFxWcmp4PFZxDoCa5X7RxE_UffLso-',1),
 /* 32 */
-('SMIRNOFF 0.03L',1.400,12.00,2.97,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1c4x3kJ_D7StpO1A63b8hF45EuWdGUNvV'),
+('SMIRNOFF 0.03L',1.400,12.00,2.97,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1c4x3kJ_D7StpO1A63b8hF45EuWdGUNvV',1),
 /* 33 */
-('BOMBAY SAPPHIRE 0.03L',1.400,18.00,4.41,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1c4x3kJ_D7StpO1A63b8hF45EuWdGUNvV');
+('BOMBAY SAPPHIRE 0.03L',1.400,18.00,4.41,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1c4x3kJ_D7StpO1A63b8hF45EuWdGUNvV',1);
 
 insert into porez
 (stopapdv,stopapp) values
