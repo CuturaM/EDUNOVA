@@ -52,7 +52,6 @@ korisnik int not null,
 iznos decimal(18,2) not null,
 kupac int,
 nacinplacanja varchar(50),
-pdv int not null,
 blagajna varchar(50) not null
 );
 
@@ -70,9 +69,11 @@ drzava varchar(50) not null
 
 
 
-create table pdv (
+create table porez(
 sifra int not null primary key auto_increment,
-stopapdv decimal(18,2) not null
+stopapdv decimal(18,2) not null,
+stopapp decimal(18,2) not null,
+racun int
 );
 
 
@@ -83,8 +84,9 @@ alter table narudzba add foreign key (artikl) references artikl(sifra);
 alter table narudzba add foreign key (racun) references racun(sifra);
 
 alter table racun add foreign key (korisnik) references korisnik(sifra);
-alter table racun add foreign key (pdv) references pdv(sifra);
 alter table racun add foreign key (kupac) references kupac(sifra);
+
+alter table porez add foreign key (racun) references racun(sifra);
 
 
 
@@ -168,12 +170,10 @@ insert into artikl
 /* 33 */
 ('BOMBAY SAPPHIRE 0.03L',1.400,18.00,4.41,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1c4x3kJ_D7StpO1A63b8hF45EuWdGUNvV');
 
-insert into pdv
-(stopapdv) values
+insert into porez
+(stopapdv,stopapp) values
 /* 1 */
-(25.00),
-/* 2 */
-(3.00);
+(25.00,3.00);
 
 
 
