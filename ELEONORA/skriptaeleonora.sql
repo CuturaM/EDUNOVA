@@ -14,7 +14,7 @@ prezime varchar(50) not null,
 lozinka char(4) not null,
 oib char(11) not null,
 email varchar(50) not null,
-administrator int
+administrator boolean
 );
 
 
@@ -39,7 +39,8 @@ sifra int not null primary key auto_increment,
 artikl int not null,
 racun int not null,
 kolicina decimal(18,3), 
-popust decimal(18,2)
+popust decimal(18,2),
+cijena decimal(18,2)
 );
 
 
@@ -79,7 +80,6 @@ racun int
 
 
 
-alter table korisnik add foreign key (administrator) references korisnik(sifra);
 
 alter table narudzba add foreign key (artikl) references artikl(sifra);
 alter table narudzba add foreign key (racun) references racun(sifra);
@@ -98,7 +98,7 @@ insert into korisnik
 /* 1 */
 ('Marin','Čutura','0646','06466535209','w.cutura1990@gmail.com',1),
 /* 2 */
-('Vlatka','Martinić','0103','01031831151','vlatka.martinic@gmail.com',null);
+('Vlatka','Martinić','0103','01031831151','vlatka.martinic@gmail.com',0);
 
 
 
@@ -171,6 +171,8 @@ insert into artikl
 /* 33 */
 ('BOMBAY SAPPHIRE 0.03L',1.400,18.00,4.41,0.030,'STRANA ŽESTOKA PIĆA','ŠANK1','https://drive.google.com/open?id=1c4x3kJ_D7StpO1A63b8hF45EuWdGUNvV',1);
 
+
+
 insert into porez
 (stopapdv,stopapp) values
 /* 1 */
@@ -178,6 +180,49 @@ insert into porez
 
 
 
+insert into racun
+(korisnik,iznos,nacinplacanja,blagajna) values
+/* 1 */
+(1,0.00,'Gotovina','Kasa1'),
+/* 2 */
+(1,0.00,'Gotovina','Kasa1'),
+/* 3 */
+(1,0.00,'Gotovina','Kasa1'),
+/* 4 */
+(2,0.00,'Gotovina','Kasa1'),
+/* 5 */
+(2,0.00,'Gotovina','Kartica Visa');
+
+
+
+insert into narudzba
+(artikl,racun,kolicina,popust,cijena) values
+/* 1 */
+(1,1,1.00,0.00,8.00),
+/* 2 */
+(4,1,3.00,0.00,10.00),
+/* 3 */
+(1,2,5.00,0.00,8.00),
+/* 4*/
+(14,2,4.00,0.00,10.00),
+/* 5 */
+(33,3,2.00,0.00,18.00),
+/* 6 */
+(11,3,1.00,0.00,15.00),
+/* 7 */
+(8,4,3.00,0.00,15.00),
+/* 8 */
+(15,4,5.00,0.00,11.00),
+/* 9 */ 
+(27,5,3.00,0.00,12.00),
+/* 10 */
+(21,5,5.00,0.00,15.00);
+
+
+insert into kupac
+(naziv,oib,grad,ulica,drzava) values
+/* 1 */
+('Romos Commerce d.o.o.','23988915754','Osijek','Ferde Livadića 9','HR');
 
 
 
