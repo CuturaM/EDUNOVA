@@ -191,32 +191,32 @@ insert into racun
 /* 4 */
 (2,0.00,'Gotovina','Kasa1'),
 /* 5 */
-(2,0.00,'Gotovina','Kartica Visa');
+(2,0.00,'Kartica','Kasa1');
 
 
 
 insert into narudzba
 (artikl,racun,kolicina,popust,cijena) values
 /* 1 */
-(1,1,1.00,0.00,8.00),
+(1,1,1.000,0.00,8.00),
 /* 2 */
-(4,1,3.00,0.00,10.00),
+(4,1,3.000,0.00,10.00),
 /* 3 */
-(1,2,5.00,0.00,8.00),
+(1,2,5.000,0.00,8.00),
 /* 4*/
-(14,2,4.00,0.00,10.00),
+(14,2,4.000,0.00,10.00),
 /* 5 */
-(33,3,2.00,0.00,18.00),
+(33,3,2.000,0.00,18.00),
 /* 6 */
-(11,3,1.00,0.00,15.00),
+(11,3,1.000,0.00,15.00),
 /* 7 */
-(8,4,3.00,0.00,15.00),
+(8,4,3.000,0.00,15.00),
 /* 8 */
-(15,4,5.00,0.00,11.00),
+(15,4,5.000,0.00,11.00),
 /* 9 */ 
-(27,5,3.00,0.00,12.00),
+(27,5,3.000,0.00,12.00),
 /* 10 */
-(21,5,5.00,0.00,15.00);
+(21,5,5.000,0.00,15.00);
 
 
 insert into kupac
@@ -225,6 +225,20 @@ insert into kupac
 ('Romos Commerce d.o.o.','23988915754','Osijek','Ferde Livadića 9','HR');
 
 
+/* UPDATE */
 
-
-
+update racun set iznos=38.00 where sifra=1;
+update racun set iznos=80.00 where sifra=2;
+update racun set iznos=51.00 where sifra=3;
+update racun set iznos=100.00 where sifra=4;
+update racun set iznos=111.00 where sifra=5;
+update artikl set zaliha=zaliha-0.007 where sifra=1;
+update artikl set zaliha=zaliha-0.021 where sifra=1;
+update artikl set zaliha=zaliha-0.035 where sifra=1;
+update artikl set zaliha=zaliha-4.000 where sifra=14;
+update artikl set zaliha=zaliha-0.060 where sifra=33;
+update artikl set zaliha=zaliha-1.000 where sifra=11;
+update artikl set zaliha=zaliha-3.000 where sifra=8;
+update artikl set zaliha=zaliha-5.000 where sifra=15;
+update artikl set zaliha=zaliha-0.090 where sifra=27;
+update artikl set zaliha=zaliha-5.000 where sifra=21;
