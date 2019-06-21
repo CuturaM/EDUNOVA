@@ -73,9 +73,10 @@ drzava varchar(50) not null
 
 create table porez(
 sifra int not null primary key auto_increment,
-stopapdv decimal(18,2) not null,
-stopapp decimal(18,2) not null,
-racun int
+naziv varchar(10) not null,
+stopa decimal(18,2) not null,
+racun int,
+iznosporeza decimal(18,2)
 );
 
 
@@ -173,12 +174,6 @@ insert into artikl
 
 
 
-insert into porez
-(stopapdv,stopapp) values
-/* 1 */
-(25.00,3.00);
-
-
 
 insert into racun
 (korisnik,iznos,nacinplacanja,blagajna) values
@@ -217,6 +212,14 @@ insert into narudzba
 (27,5,3.000,0.00,12.00),
 /* 10 */
 (21,5,5.000,0.00,15.00);
+
+
+
+insert into porez
+(naziv,stopa,racun,iznosporeza) values
+/* 1 */
+('pdv',25.00,1,null);
+
 
 
 insert into kupac
