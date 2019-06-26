@@ -8,19 +8,16 @@ public class CiklicnaSpirala {
 		int n = Integer.parseInt(JOptionPane.showInputDialog("Broj redaka"));
 
 		int m;
-		
-		while(true) {
-			//ovo nikada ne raditi
-			//int i;
-			
+
+		while (true) {
+
 			m = Integer.parseInt(JOptionPane.showInputDialog("Broj stupaca"));
-			if(m==n) {
+			if (m == n) {
 				break;
 			}
-			
+
 			JOptionPane.showConfirmDialog(null, "Broj stupaca mora biti jednak broju redaka!");
 		}
-		
 
 		int a[][] = new int[n][m];
 		int k = 1, c1 = 0, c2 = n - 1, r1 = 0, r2 = n - 1;
@@ -57,6 +54,5 @@ public class CiklicnaSpirala {
 		}
 
 	}
-
 
 }
