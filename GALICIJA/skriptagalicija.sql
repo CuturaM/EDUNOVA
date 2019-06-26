@@ -9,9 +9,9 @@ use galicija;
 create table uplatitelj(
 sifra int not null primary key auto_increment,
 ime varchar(50) not null,
-prezime varchar(50) not null,
-iban varchar(32) not null,
-email varchar(50) not null
+prezime varchar(50),
+iban varchar(32),
+email varchar(50)
 );
 
 
@@ -29,7 +29,7 @@ iznosuplate decimal(18,2) not null
 create table isplatitelj(
 sifra int not null primary key auto_increment,
 naziv varchar(50) not null,
-iban varchar(32) not null,
+iban varchar(32),
 email varchar(100)
 );
 
@@ -129,7 +129,7 @@ insert into kategorija
 
 
 insert into uplata
-(uplatitelj,iznosuplate,kategorija)
+(uplatitelj,iznosuplate,kategorija) values
 /* 1 */
 (1,4200.00,12),
 /* 2 */
@@ -138,10 +138,44 @@ insert into uplata
 (3,1000.00,14);
 
 
+insert into isplatitelj
+(naziv,iban,email) values
+/* 1 */
+('NTL',null,null),
+/* 2 */
+('Caffe bar Amsterdam',null,null),
+/* 3 */
+('Edunova - Ustanova za obrazovanje','HR8025000092467176257','info@edunova.hr'),
+/* 4 */
+('Tisak',null,null),
+/* 5 */
+('Lidl',null,null),
+/* 6 */
+('Darko Rejo',null,null);
 
 
+insert into isplata
+(isplatitelj,iznosisplate,kategorija) values
+/* 1 */
+(1,200.00,1),
+/* 2 */
+(2,50.00,4),
+/* 3 */
+(2,25.00,4),
+/* 4 */
+(3,2500.00,5),
+/* 5 */
+(4,30.00,9),
+/* 6 */
+(6,1500.00,10),
+/* 7 */
+(5,431.30,2);
 
 
+insert into stednja
+(iznos) values
+/* 1 */
+(200.00);
 
 
 
