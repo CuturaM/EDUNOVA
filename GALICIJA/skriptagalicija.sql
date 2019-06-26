@@ -74,4 +74,79 @@ alter table uplata add foreign key (uplatitelj) references uplatitelj(sifra);
 alter table isplata add foreign key (isplatitelj) references isplatitelj(sifra);
 alter table uplata add foreign key (kategorija) references kategorija(sifra);
 alter table isplata add foreign key (kategorija) references kategorija(sifra);
- 
+
+create unique index ix1 on operater(naziv); 
+
+
+insert into operater
+(naziv,lozinka,ime,prezime,uloga) values
+/* 1 */
+('cuturam',md5('c'),'Marin','Čutura','Administrator'),
+/* 2 */
+('vlatkam',md5('v'),'Vlatka','Martinić','Operater');
+
+
+insert into uplatitelj
+(ime,prezime,iban,email) values
+/* 1 */
+('Ante','Starčević','HR7525000097285599549','ante.starcevic@gmail.com'),
+/* 2 */
+('Stjepan','Radić','HR0823600002984545987','stjepan.radic@gmail.com'),
+/* 3 */
+('Josip','Jelačić','HR3024020065697275282','josip.jelacic@gmail.com');
+
+
+insert into kategorija
+(naziv) values
+/* 1 */
+('Hrana/Piće'),
+/* 2 */
+('Kupovina'),
+/* 3 */
+('Prijevoz'),
+/* 4 */
+('Zabava'),
+/* 5 */
+('Obitelj'),
+/* 6 */
+('Zdravlje/Sport'),
+/* 7 */
+('Kućni ljubimci'),
+/* 8 */
+('Putovanja'),
+/* 9 */
+('Cigarete'),
+/* 10 */
+('Režije/Stanarina'),
+/* 11 */
+('Plaća'),
+/* 12 */
+('Mirovina'),
+/* 13 */
+('Poslići'),
+/* 14 */
+('Financijski prihod');
+
+
+insert into uplata
+(uplatitelj,iznosuplate,kategorija)
+/* 1 */
+(1,4200.00,12),
+/* 2 */
+(2,400.00,13),
+/* 3 */
+(3,1000.00,14);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
