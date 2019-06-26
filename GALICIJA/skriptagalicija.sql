@@ -68,3 +68,10 @@ ime varchar(50) not null,
 prezime varchar(50) not null,
 uloga varchar(50) not null
 );
+
+
+alter table uplata add foreign key (uplatitelj) references uplatitelj(sifra);
+alter table isplata add foreign key (isplatitelj) references isplatitelj(sifra);
+alter table uplata add foreign key (kategorija) references kategorija(sifra);
+alter table isplata add foreign key (kategorija) references kategorija(sifra);
+ 
