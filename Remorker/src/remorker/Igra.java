@@ -7,6 +7,7 @@ public class Igra {
 	UpravljanjeIzborima uIzborima = new UpravljanjeIzborima();
 	UI ui = new UI();
 	Vidljivost vi = new Vidljivost(ui);
+	Prica prica = new Prica(this, ui, vi);
 
 	public static void main(String[] args) {
 
@@ -16,6 +17,7 @@ public class Igra {
 
 	public Igra() {
 		ui.napraviUI(uIzborima);
+		prica.zadanePostavke();
 		vi.prikaziGlavniIzbornik();
 
 	}

@@ -16,7 +16,7 @@ public class UI {
 
 	JFrame window;
 	JPanel imeNaslovnicePanel, startTipkaPanel, glavniTekstPanel, izboriTipkaPanel, igracPanel;
-	JLabel imeNaslovniceLable, hpLabel, hpBrojLabel, oruzijeLable, oruzijeImeLabel;
+	JLabel imeNaslovniceLable, hpLabel, hpBrojLabel, oruzjeLable, oruzjeImeLabel;
 	JButton startTipka, izbor1, izbor2, izbor3, izbor4;
 	JTextArea glavnoTekstPodrucje;
 	Font naslovnicaFont = new Font("Times New Roman", Font.PLAIN, 90);
@@ -124,14 +124,14 @@ public class UI {
 		hpBrojLabel.setFont(normalniFont);
 		hpBrojLabel.setForeground(Color.red);
 		igracPanel.add(hpBrojLabel);
-		oruzijeLable = new JLabel("Oružje:");
-		oruzijeLable.setFont(normalniFont);
-		oruzijeLable.setForeground(Color.red);
-		igracPanel.add(oruzijeLable);
-		oruzijeImeLabel = new JLabel();
-		oruzijeImeLabel.setFont(normalniFont);
-		oruzijeImeLabel.setForeground(Color.red);
-		igracPanel.add(oruzijeImeLabel);
+		oruzjeLable = new JLabel("Oružje:");
+		oruzjeLable.setFont(normalniFont);
+		oruzjeLable.setForeground(Color.red);
+		igracPanel.add(oruzjeLable);
+		oruzjeImeLabel = new JLabel();
+		oruzjeImeLabel.setFont(normalniFont);
+		oruzjeImeLabel.setForeground(Color.red);
+		igracPanel.add(oruzjeImeLabel);
 
 		window.setVisible(true);
 
