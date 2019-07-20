@@ -30,7 +30,7 @@ public class Start {
 				promjenaOsobe();
 				break;
 			case 4:
-				// domaæa zadaæa: implementirati brisanje
+				brisanjeOsobe();
 				break;
 			default:
 				break;
@@ -40,6 +40,12 @@ public class Start {
 		
 	}
 	
+	private void brisanjeOsobe() {
+		izlistajOsobe();
+		osobe.remove(redniBrojOsobe()-1);
+		
+	}
+
 	private void promjenaOsobe() {
 		// u programu napraviti da su ponuðene stare vrijednosti
 		izlistajOsobe();
